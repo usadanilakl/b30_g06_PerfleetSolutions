@@ -14,6 +14,24 @@ public class BasePage {
 
     @FindBy(linkText = "Learn how to use this space")
     private WebElement learnHowToUseThisSpaceLink;
+    @FindBy(xpath = "//a[@href='#']/span[contains(text(),'Fleet')]/../..")
+    private WebElement fleetLink;
+    @FindBy(linkText = "Vehicle Odometer")
+    private WebElement vehicleOdometerLink;
+    @FindBy(css="div[data-messenger-namespace='eed2dfc230ad3968235b216c8d8c54588cb2f30904a1c179d4416e09dd8008d3']>div")
+    private WebElement youDoNotHavePermissionToPerformThisActionMessage;
+
+    public WebElement getYouDoNotHavePermissionToPerformThisActionMessage() {
+        return youDoNotHavePermissionToPerformThisActionMessage;
+    }
+
+    public WebElement getVehicleOdometerLink() {
+        return vehicleOdometerLink;
+    }
+
+    public WebElement getFleetLink() {
+        return fleetLink;
+    }
 
     public WebElement getFleetManagementLink() {
         return fleetManagementLink;
