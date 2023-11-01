@@ -37,6 +37,11 @@ public class LoginPage {
         usernameInput.sendKeys(username);
         passwordInput.sendKeys(password, Keys.ENTER);
     }
+    public void login(String user){
+        if (user.equals("driver")) loginAsDriver();
+        if(user.equals("sales manager")) loginAsSalesMan();
+        if(user.equals("store manager")) loginAsStoreMan();
+    }
 
 
 }
