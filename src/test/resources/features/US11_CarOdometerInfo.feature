@@ -1,4 +1,4 @@
-@wip
+@Odometer
 Feature: Car Odometer Info
   User Story:  As a user, I want to view car odometer info on the Vehicles Odometers page.
   Background: Login Page
