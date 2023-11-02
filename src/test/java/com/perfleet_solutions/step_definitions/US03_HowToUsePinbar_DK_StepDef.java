@@ -7,13 +7,10 @@ import com.perfleet_solutions.utils.ConfigReader;
 import com.perfleet_solutions.utils.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
-import org.junit.Assert;
-
-import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 
-public class HowToUsePinbar_DK_StepDef {
+public class US03_HowToUsePinbar_DK_StepDef {
     @Given("login page is open")
     public void login_page_is_open() {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
