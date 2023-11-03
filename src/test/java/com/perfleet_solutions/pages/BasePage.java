@@ -24,6 +24,12 @@ public class BasePage {
     private WebElement customersLink;
     @FindBy(xpath = "//a[@href='/account']//span[contains(text(),\"Accounts\")]")
     private WebElement accountsLink;
+    @FindBy(xpath = "//a[@href='/entity/Extend_Entity_VehicleCosts']/span")
+    private WebElement vehicleCostLink;
+
+    public WebElement getVehicleCostLink() {
+        return vehicleCostLink;
+    }
 
     public WebElement getCustomersLink() {
         return customersLink;
