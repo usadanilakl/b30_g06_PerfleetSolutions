@@ -1,5 +1,6 @@
 package com.perfleet_solutions.step_definitions;
 
+import com.perfleet_solutions.utils.Browser;
 import com.perfleet_solutions.utils.Driver;
 import io.cucumber.java.After;
 import io.cucumber.java.Scenario;
@@ -14,6 +15,7 @@ public class Hooks {
             byte[] screenshot = ((TakesScreenshot) Driver.getDriver()).getScreenshotAs(OutputType.BYTES);
             scenario.attach(screenshot, "image/png", scenario.getName());
         }
+        Browser.sleep(2);
         Driver.terminate();
     }
 }

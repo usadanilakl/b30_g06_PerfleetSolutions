@@ -24,7 +24,7 @@ public class AllVehicleCostsPage {
     public WebElement getSelectAllCheckBox() {
         return selectAllCheckBox;
     }
-    @FindBy(xpath = "//table//input[@type='checkbox']")
+    @FindBy(xpath = "//tbody//input[@type='checkbox']")
     private List<WebElement> allCheckboxes;
 
     public List<WebElement> getAllCheckboxes() {
