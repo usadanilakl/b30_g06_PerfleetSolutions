@@ -43,5 +43,9 @@ public class LoginPage {
         if(user.equals("store manager")) loginAsStoreMan();
     }
 
+    public void open(){
+        Driver.getDriver().get(ConfigReader.getProperty("url"));
+    }
+
 
 }

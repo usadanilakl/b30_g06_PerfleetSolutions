@@ -20,6 +20,18 @@ public class BasePage {
     private WebElement vehicleOdometerLink;
     @FindBy(css="div[data-messenger-namespace='eed2dfc230ad3968235b216c8d8c54588cb2f30904a1c179d4416e09dd8008d3']>div")
     private WebElement youDoNotHavePermissionToPerformThisActionMessage;
+    @FindBy(xpath = "//a[@href='#']//span[contains(text(),\"Customers\")]")
+    private WebElement customersLink;
+    @FindBy(xpath = "//a[@href='/account']//span[contains(text(),\"Accounts\")]")
+    private WebElement accountsLink;
+
+    public WebElement getCustomersLink() {
+        return customersLink;
+    }
+
+    public WebElement getAccountsLink() {
+        return accountsLink;
+    }
 
     public WebElement getYouDoNotHavePermissionToPerformThisActionMessage() {
         return youDoNotHavePermissionToPerformThisActionMessage;
