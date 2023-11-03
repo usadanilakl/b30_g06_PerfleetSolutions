@@ -8,6 +8,8 @@ import com.perfleet_solutions.utils.Driver;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.When;
 
+import java.util.List;
+
 import static org.junit.Assert.assertEquals;
 
 public class US03_HowToUsePinbar_DK_StepDef {
@@ -30,15 +32,15 @@ public class US03_HowToUsePinbar_DK_StepDef {
         }
     }
     @When("user click the “Learn how to use this space” link on the homepage, users should see:")
-    public void user_click_the_learn_how_to_use_this_space_link_on_the_homepage_users_should_see() {
+    public void user_click_the_learn_how_to_use_this_space_link_on_the_homepage_users_should_see(List<String>expected) {
         new BasePage().getLearnHowToUseThisSpaceLink().click();
         HowToUsePinbarPage howPage = new HowToUsePinbarPage();
 
-        assertEquals("How To Use Pinbar text is wrong","How To Use Pinbar",howPage.getHowToUsePinbarText().getText());
+        assertEquals("How To Use Pinbar text is wrong",expected.get(0),howPage.getHowToUsePinbarText().getText());
 
-        assertEquals("Use the pin icon on the right top corner of the page to create fast access link in the pinbar. text is wrong","Use the pin icon on the right top corner of the page to create fast access link in the pinbar.",howPage.getInsturctionText().getText());
+        assertEquals("Use the pin icon on the right top corner of the page to create fast access link in the pinbar. text is wrong",expected.get(1),howPage.getInsturctionText().getText());
 
-        assertEquals("image path is wrong", "https://qa.perfleet.com/bundles/oronavigation/images/pinbar-location.jpg", howPage.getImage().getAttribute("src"));
+        assertEquals("image path is wrong", expected.get(2), howPage.getImage().getAttribute("src"));
     }
 
 }
