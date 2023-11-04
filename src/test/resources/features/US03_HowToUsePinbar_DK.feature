@@ -2,15 +2,16 @@
 Feature: As a user, I want to learn how to use the pinbar.
 
 
-  Background: get to login page
-    Given login page is open
+  Background: Login
+    Given user opens login page
 
   Scenario Outline: click on "how to learn" link from driver account
-    Given "<user>" is logged in
-    When user click the “Learn how to use this space” link on the homepage, users should see:
-      | How To Use Pinbar                                                                      |
-      | Use pin icon on the right top corner of page to create fast access link in the pinbar. |
-      | https://qa.perfleet.com/bundles/oronavigation/images/pinbar-location.jpg               |
+    When "<user>" logs in
+    Then user click the Learn how to use this space link on the homepage
+    And users should see header "How To Use Pinbar"
+    And paragraph "Use pin icon on the right top corner of page to create fast access link in the pinbar."
+    And picture that has the following url "https://qa.perfleet.com/bundles/oronavigation/images/pinbar-location.jpg"
+
 
     Examples:
       | user          |
