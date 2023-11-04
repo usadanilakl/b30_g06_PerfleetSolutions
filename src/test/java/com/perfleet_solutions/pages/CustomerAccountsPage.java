@@ -8,10 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CustomerAccountsPage {
-    public CustomerAccountsPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+public class CustomerAccountsPage extends BasePage{
     @FindBy(xpath = "//a[@title='Filters']")
     private WebElement filtersButton;
     @FindBy(xpath = "//div[@class='btn filter-criteria-selector oro-drop-opener oro-dropdown-toggle filter-default-value']")

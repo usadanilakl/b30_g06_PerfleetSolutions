@@ -8,10 +8,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
-public class CampaignsPage {
-    public CampaignsPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+public class CampaignsPage extends BasePage{
     @FindBy(linkText = "Manage filters")
     private WebElement manageFiltersDropdown;
     public WebElement getManageFiltersDropdown() {

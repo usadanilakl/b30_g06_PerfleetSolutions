@@ -8,10 +8,8 @@ import org.openqa.selenium.support.PageFactory;
 import java.util.List;
 import java.util.Set;
 
-public class AllVehicleCostsPage {
-    public AllVehicleCostsPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+public class AllVehicleCostsPage extends BasePage{
+
     @FindBy(xpath = "//span[@class='grid-header-cell__label']")
     private List<WebElement> allVehiclesTable;
 

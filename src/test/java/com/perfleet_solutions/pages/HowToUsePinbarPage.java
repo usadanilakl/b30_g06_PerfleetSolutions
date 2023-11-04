@@ -4,9 +4,9 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 
 public class HowToUsePinbarPage extends BasePage{
-    public HowToUsePinbarPage(){
-        super();
-    }
+//    public HowToUsePinbarPage(){
+//        super();
+//    }
     @FindBy(css="div.clearfix>h3")
     private WebElement howToUsePinbarText;
     @FindBy(css="div.clearfix>p")

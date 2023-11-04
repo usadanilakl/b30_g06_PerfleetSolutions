@@ -1,14 +1,18 @@
 package com.perfleet_solutions.pages;
 
+import com.perfleet_solutions.utils.Browser;
 import com.perfleet_solutions.utils.Driver;
+import org.junit.Test;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class VehicleOdometerPage {
-    public VehicleOdometerPage(){
-        PageFactory.initElements(Driver.getDriver(), this);
-    }
+import java.time.Duration;
+
+public class VehicleOdometerPage extends BasePage{
+
 
     @FindBy(css="input[type='number']")
     private WebElement pageNumber;
@@ -23,4 +27,5 @@ public class VehicleOdometerPage {
     public WebElement getElementsPerPage() {
         return elementsPerPage;
     }
+
 }
