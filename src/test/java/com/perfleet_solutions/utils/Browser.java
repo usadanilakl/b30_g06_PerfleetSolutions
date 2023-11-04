@@ -13,6 +13,6 @@ public class Browser {
     }
 
     public static void moveToWebElement(WebElement element){
-        new Actions(Driver.getDriver()).moveToElement(element);
+        new Actions(Driver.getDriver()).moveToElement(element).perform();
     }
 }

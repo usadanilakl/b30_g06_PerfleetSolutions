@@ -1,6 +1,7 @@
 package com.perfleet_solutions.step_definitions;
 
 import com.perfleet_solutions.pages.CustomerAccountsPage;
+import com.perfleet_solutions.pages.main_menu.Menu;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
@@ -14,7 +15,9 @@ public class CustomerAccounts_StepDef_DK {
 
     @When("clicks on Account Page")
     public void clicks_on_account_page() {
-        customerAccountsPage.openPage("Customers", "Accounts");
+
+        //customerAccountsPage.openPage("Customers", "Accounts");
+        customerAccountsPage.openPage(Menu.Customers.accounts);
     }
     @When("clicks on filter manager")
     public void clicks_on_filter_manager() {
