@@ -1,6 +1,7 @@
 package com.perfleet_solutions.step_definitions;
 
 import com.perfleet_solutions.pages.AllVehicleCostsPage;
+import com.perfleet_solutions.pages.main_menu.Menu;
 import com.perfleet_solutions.utils.Driver;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
@@ -17,7 +18,10 @@ public class AllVehicleCostFilter_StepDef_DK {
     WebDriverWait wait = new WebDriverWait(Driver.getDriver(), Duration.ofSeconds(10));
     @When("clicks on Vehicle Costs Page")
     public void clicks_on_vehicle_costs_page() {
-        allVehicleCostsPage.openPage("Fleet", "Vehicle Costs");
+
+        //allVehicleCostsPage.openPage("Fleet", "Vehicle Costs");
+        allVehicleCostsPage.openPage(Menu.Fleet.vehiclesCosts);
+
     }
     @Then("table with the following columns should be shown")
     public void table_with_the_following_columns_is_shown(List<String> dataTable) {
