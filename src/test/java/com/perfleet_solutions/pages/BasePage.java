@@ -51,7 +51,7 @@ public class BasePage {
     @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']//ul/li//a/span[@class='title title-level-4']")
     private List<WebElement> fourthLevelDropdownOptions;
 
-    //penPage method takes 2 arguments:
+    //OpenPage method takes 2 arguments:
     //   name of the dropdown of the main menu
     //   name of the option of the selected dropdown
     // upon execution of the method the respective page is opened.
