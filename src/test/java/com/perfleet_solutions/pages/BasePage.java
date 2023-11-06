@@ -43,6 +43,11 @@ public class BasePage {
 
     @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']/li/a/span")
     protected List<WebElement> mainMenu;
+
+    public List<WebElement> getMainMenu() {
+        return mainMenu;
+    }
+
     @FindBy(xpath = "//ul[@class='nav-multilevel main-menu']//ul/li/a/span[@class='title title-level-2']")
     protected List<WebElement> dropdownOptions;
 
