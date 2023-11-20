@@ -15,7 +15,7 @@ public class Driver {
     public static WebDriver getDriver(){
         if(driver.get()==null){
             switch (ConfigReader.getProperty("browser")){
-                case "chrome":
+                case "chrome.":
                     driver.set(new ChromeDriver());
                     break;
                 case "firefox":
