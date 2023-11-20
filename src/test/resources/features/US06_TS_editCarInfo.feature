@@ -8,9 +8,9 @@ Feature: User Story :  As a user, I want to see edit car info icons from the Veh
     And users open vehicle page
     And user hover the mouse over the three dots “…”
     And see following options
-    |view|
-    |edit|
-    |delete|
+    |View|
+    |Edit|
+    |Delete|
 
 
 

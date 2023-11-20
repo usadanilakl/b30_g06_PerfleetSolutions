@@ -32,7 +32,7 @@ public class VehicleStepDefinition {
     @When("user hover the mouse over the three dots “…”")
     public void user_hover_the_mouse_over_the_dots() {
         wait.until(ExpectedConditions.visibilityOf(vehiclepage.ellipsis));
-        actions.moveToElement(vehiclepage.ellipsis);
+        actions.moveToElement(vehiclepage.ellipsis).perform();
     }
     @When("see following options")
     public void see_following_options(List<String> expectedOptions) {
