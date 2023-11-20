@@ -15,7 +15,7 @@ import org.junit.runner.RunWith;
         features = "src/test/resources/features",
         glue = "com/perfleet_solutions/step_definitions",
         dryRun = false,
-        tags = "@US01",
+        tags = "@wip",
         publish = true
 )
 public class Runner1 {
