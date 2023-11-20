@@ -12,7 +12,7 @@ public class LoginStepDef_DK {
         Driver.getDriver().get(ConfigReader.getProperty("url"));
     }
     @When("{string} logs in")
-    public void logs_in(String string) {
-        new LoginPage().login(string);
+    public void logs_in(String Usertype) {
+        new LoginPage().login(Usertype);
     }
 }
