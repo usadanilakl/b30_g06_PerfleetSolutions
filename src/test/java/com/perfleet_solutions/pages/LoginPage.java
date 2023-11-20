@@ -1,5 +1,6 @@
 package com.perfleet_solutions.pages;
 
+import com.perfleet_solutions.utils.Browser;
 import com.perfleet_solutions.utils.ConfigReader;
 import com.perfleet_solutions.utils.Driver;
 import org.junit.Test;
@@ -24,17 +25,22 @@ public class LoginPage {
     public void loginAsDriver(){
         usernameInput.sendKeys(getProperty("driver_username"));
         passwordInput.sendKeys(getProperty("driver_password"), Keys.ENTER);
+        Browser.sleep(2);
     }
     public void loginAsStoreMan(){
         usernameInput.sendKeys(getProperty("store_manager_username"));
+        Browser.sleep(2);
         passwordInput.sendKeys(getProperty("store_manager_password"), Keys.ENTER);
+
     }
     public void loginAsSalesMan(){
         usernameInput.sendKeys(getProperty("sales_manager_username"));
+        Browser.sleep(2);
         passwordInput.sendKeys(getProperty("sales_manager_password"), Keys.ENTER);
     }
     public void login(String username, String password){
         usernameInput.sendKeys(username);
+        Browser.sleep(2);
         passwordInput.sendKeys(password, Keys.ENTER);
     }
     public void login(String user){

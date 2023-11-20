@@ -2,6 +2,7 @@ package com.perfleet_solutions.step_definitions;
 
 import com.perfleet_solutions.pages.BasePage;
 import com.perfleet_solutions.pages.HowToUsePinbarPage;
+import com.perfleet_solutions.pages.main_menu.Menu;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.When;
 

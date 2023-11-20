@@ -65,6 +65,7 @@ public class BasePage {
         WebElement moveTo = mainMenu.stream().filter(p->p.getText().equalsIgnoreCase(menuOption)).findFirst().orElse(null);
         actions.moveToElement(moveTo).perform();
         Browser.sleep(1);
+        wait.until(ExpectedConditions.visibilityOf(dropdownOptions.stream().filter(p->p.getText().equalsIgnoreCase(dropdownOption)).findFirst().get()));
         WebElement clickOn = dropdownOptions.stream().filter(p->p.getText().equalsIgnoreCase(dropdownOption)).findFirst().get();
         clickOn.click();
     }
@@ -98,5 +99,7 @@ public class BasePage {
         if(path.length==3) openPage(path[0], path[1], path[2]);
         if(path.length==4) openPage(path[0], path[1], path[2], path[3]);
     }
+
+
 
 }

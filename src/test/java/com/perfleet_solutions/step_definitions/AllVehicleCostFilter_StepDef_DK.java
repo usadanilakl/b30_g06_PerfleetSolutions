@@ -38,6 +38,8 @@ public class AllVehicleCostFilter_StepDef_DK {
             Assert.assertEquals("headers do not match:", dataTable.get(i), actualTableHeaders.get(i));
         }
 
+
+
     }
 
     @When("user clicks on checkbox next to type column")

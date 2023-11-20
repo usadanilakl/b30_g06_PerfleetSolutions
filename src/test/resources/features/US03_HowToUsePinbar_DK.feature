@@ -1,4 +1,4 @@
-@pinbar
+@hello
 Feature: As a user, I want to learn how to use the pinbar.
 
 
